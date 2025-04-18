@@ -16,11 +16,13 @@ const nunito = Nunito({
 export default function Home() {
   const [second, setSecond] = useState(false)
   const [ third, setThird ] = useState(false);
+  const [ blockchain, setBlockChain ] = useState("Solana")
   const solSubmit = () => {
     setSecond(true)
   }
   return (
-    <div className={`w-full h-auto px-20 overflow-x-hidden py-5 ${nunito.className}`}>
+    <div className={`w-full flex justify-between flex-col h-screen px-20 overflow-x-hidden py-5 ${nunito.className}`}>
+      <div>
       <Header />
       {!second && 
       <div>
@@ -50,8 +52,9 @@ export default function Home() {
       </div>
       }
       {third && (
-        <Keys/>
+        <Keys coin="Solana"/>
       )}
+      </div>
       <div className="mt-10">
         2025- Developed by <a href="navinvenkat.xyz" className="font-bold">Navin Venkat</a>
       </div>

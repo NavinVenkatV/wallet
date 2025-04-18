@@ -6,11 +6,11 @@ import { NextRequest, NextResponse } from 'next/server';
 import bs58 from 'bs58';
 
 export async function POST(req : NextRequest){
-    const { i, phrase } = await req.json();
+    const { i, mnemonic } = await req.json();
    try {
     let mnemonicWords = generateMnemonic();
-    if(phrase){
-        mnemonicWords = phrase.trim(" ");
+    if(mnemonic){
+        mnemonicWords = mnemonic;
     }
     const seed = mnemonicToSeedSync(mnemonicWords);
     //Assume we can retrieve upto 5 wallets;
