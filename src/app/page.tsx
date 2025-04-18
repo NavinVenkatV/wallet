@@ -21,7 +21,7 @@ export default function Home() {
     setSecond(true)
   }
   return (
-    <div className={`w-full flex justify-between flex-col h-screen px-20 overflow-x-hidden py-5 ${nunito.className}`}>
+    <div className={`w-full  h-screen px-3 md:px-20 overflow-x-hidden py-5 ${nunito.className}`}>
       <div>
         <Header />
         {!second &&
@@ -31,8 +31,8 @@ export default function Home() {
           transition={{duration : 0.1, ease : 'easeInOut'}}
           >
             <div className="mt-10">
-              <p className="text-5xl font-bold">Nav Wallet is multi-chain ready.</p>
-              <p className="text-neutral-500 text-xl">Pick your blockchain to begin.</p>
+              <p className="text-3xl md:text-5xl font-bold">Nav Wallet is multi chain ready.</p>
+              <p className="text-neutral-500 text-lg  md:text-xl">Pick your blockchain to begin.</p>
             </div>
             <div className="flex gap-3 mt-5">
               <Button onClick={solSubmit} title="Solana" />
@@ -63,7 +63,8 @@ export default function Home() {
           <Keys coin="Solana" />
         )}
       </div>
-      <div className="mt-10">
+      <div className="mt-10 text-sm md:text-xl">
+        <b/>
         2025- Developed by <a href="navinvenkat.xyz" className="font-bold">Navin Venkat</a>
       </div>
     </div>
