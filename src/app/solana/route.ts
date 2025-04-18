@@ -1,7 +1,7 @@
 import nacl from "tweetnacl";
 import { generateMnemonic, mnemonicToSeedSync } from "bip39";
 import { derivePath } from "ed25519-hd-key";
-import { Keypair, PublicKey } from "@solana/web3.js";
+import { Keypair } from "@solana/web3.js";
 import { NextRequest, NextResponse } from 'next/server';
 import bs58 from 'bs58';
 
@@ -17,8 +17,8 @@ export async function POST(req : NextRequest){
         const path = `m/44'/501'/${i}'/0'`; //derivation path
         const derivedSeed = derivePath(path, seed.toString("hex")).key;
         const secret = nacl.sign.keyPair.fromSeed(derivedSeed).secretKey;
-        let publicKey = Keypair.fromSecretKey(secret).publicKey.toBase58();
-        let privateKey = bs58.encode(Keypair.fromSecretKey(secret).secretKey);
+        const publicKey = Keypair.fromSecretKey(secret).publicKey.toBase58();
+        const privateKey = bs58.encode(Keypair.fromSecretKey(secret).secretKey);
         // console.log(Keypair.fromSecretKey(secret).publicKey.toBase58());
         // console.log(Keypair.fromSecretKey(secret).secretKey);
         return NextResponse.json({
