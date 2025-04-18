@@ -1,38 +1,26 @@
-# 🪙 Crypto Wallet Generator & Recovery App
+# Crypto Wallet Generator & Recovery App
 
-This is a web-based wallet generation and recovery application built using **Next.js**, **Framer Motion**, and **Tailwind CSS**. It supports creating Solana wallets with secure phrase-based recovery. The UI is sleek, responsive, and focused on ease of use and safety.
+This is a web-based application for generating and managing cryptocurrency wallets for both **Solana** and **Ethereum**. It allows users to securely generate recovery phrases (mnemonics), derive wallets, and manage them with a clean and minimal interface.
 
-## 🚀 Features
+## Features
 
-- 🔐 Generate Solana wallets (public/private key pairs)
-- 🧠 View and hide secret recovery phrases (mnemonic)
-- ➕ Add multiple wallets with a single recovery phrase
-- 🗑️ Delete unwanted wallets
-- 👁️ Toggle private key visibility with password protection
-- ⚡ Smooth animations with Framer Motion
+- Generate wallets for Solana and Ethereum
+- Display public and private keys
+- Toggle visibility of private keys (masked by default)
+- Generate or input a custom mnemonic phrase
+- Add multiple wallets from the same phrase
+- Delete wallets from the UI
+- Animated transitions using Framer Motion
+- Styled using Tailwind CSS
 
-## 🛠️ Tech Stack
+## Tech Stack
 
-- **Next.js** (React Framework)
-- **Tailwind CSS** (for styling)
-- **Framer Motion** (for animations)
-- **Axios** (for API requests)
-- **Solana Web3.js** (used in backend to generate wallet data)
-- **TypeScript** (for type safety)
+- Next.js
+- Tailwind CSS
+- Framer Motion
+- Axios
+- Solana Web3.js (for Solana keypair generation)
+- Ethereum Wallet (ethers.js or similar for Ethereum)
+- TypeScript
 
-## 📦 Getting Started
-
-### Prerequisites
-
-Make sure you have the following installed:
-
-- Node.js `v18+`
-- Yarn or npm
-
-### Installation
-
-1. **Clone the repository**
-
-```bash
-git clone https://github.com/your-username/solana-wallet-app.git
-cd solana-wallet-app
+## Getting Started
