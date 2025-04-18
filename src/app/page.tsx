@@ -21,7 +21,7 @@ export default function Home() {
     setSecond(true)
   }
   return (
-    <div className={`w-full  h-screen px-3 md:px-20 overflow-x-hidden py-5 ${nunito.className}`}>
+    <div className={`w-full flex justify-between h-screen px-3 md:px-20 overflow-x-hidden py-5 ${nunito.className}`}>
       <div>
         <Header />
         {!second &&
@@ -36,7 +36,7 @@ export default function Home() {
             </div>
             <div className="flex gap-3 mt-5">
               <Button onClick={solSubmit} title="Solana" />
-              <Button title="Ethereum" />
+              <Button onClick={solSubmit} title="Ethereum" />
             </div>
             <div className="mt-7 relative w-full h-[500px]">
               <Image
@@ -64,7 +64,6 @@ export default function Home() {
         )}
       </div>
       <div className="mt-10 text-sm md:text-xl">
-        <b/>
         2025- Developed by <a href="navinvenkat.xyz" className="font-bold">Navin Venkat</a>
       </div>
     </div>
