@@ -21,7 +21,7 @@ export default function Home() {
     setSecond(true)
   }
   return (
-    <div className={`w-full flex justify-between h-screen px-3 md:px-20 overflow-x-hidden py-5 ${nunito.className}`}>
+    <div className={`w-full flex flex-col justify-between h-screen px-3 md:px-20 overflow-x-hidden py-5 ${nunito.className}`}>
       <div>
         <Header />
         {!second &&
