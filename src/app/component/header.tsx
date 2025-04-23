@@ -1,5 +1,4 @@
 import React from 'react'
-import { VscTerminalUbuntu } from "react-icons/vsc";
 import Button from './ui/Button';
 import { useRouter } from 'next/navigation';
 import Logo from './Logo';

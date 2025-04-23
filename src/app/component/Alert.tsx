@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Alert({text, action} : {
+function Alert({text} : {
     text : string,
     action : string
 }) {

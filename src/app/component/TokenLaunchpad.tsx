@@ -1,12 +1,12 @@
 "use client"
-import React, { useState } from 'react'
+import React from 'react'
 import Button from './ui/Button'
 
 function TokenLaunchpad() {
-    const [ name, setName ] = useState("");
-    const [ symbol, setSymbol ] = useState("");
-    const [ supply, setSupply ] = useState(0);
-    const [ image, setImage ] = useState();
+    // const [ name, setName ] = useState("");
+    // const [ symbol, setSymbol ] = useState("");
+    // const [ supply, setSupply ] = useState(0);
+    // const [ image, setImage ] = useState();
 
   return (
     <div className='md:min-w-[800px] mx-auto p-6 border-1 border-neutral-800 rounded-lg space-y-4'>
