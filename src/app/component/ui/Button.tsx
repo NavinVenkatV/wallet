@@ -15,8 +15,8 @@ function Button({title, onClick} : {
         hover:bg-neutral-400 transition-all ease-in-out
      text-black ${title != "Coming Soon" ? "cursor-pointer" : "cursor-not-allowed" }`}>
     <div className='flex gap-1'>
-        {title === "Solana" ? <div className='flex flex-col justify-center'><SiSolana/></div> :
-        <div className='flex flex-col justify-center'><FaEthereum/></div>}
+        {title === "Solana" && <div className='flex flex-col justify-center'><SiSolana/></div>}
+        {title === "Ethereum" && <div className='flex flex-col justify-center'><FaEthereum/></div>}
       {title}
     </div>
     </div>
